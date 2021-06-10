@@ -136,9 +136,9 @@ public class PlayGroundOwner implements User {
                 PG.get(i).avaliablehours.remove(indx);
                 PG.get(i).avaliablehours.add(indx,x);
                 flagg=1;
-                if(flagg==1)System.out.println("Request Accepted!.");
-                else System.out.println("Request Denied!.");
-                PR.remove(R);
+                if(flagg==1){System.out.println("Request Accepted!.");PR.remove(R);}
+                else DenyRequest(R);
+                
         }
         
   
