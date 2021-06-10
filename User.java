@@ -1,7 +1,6 @@
     /*
-     * To change this license header, choose License Headers in Project Properties.
-     * To change this template file, choose Tools | Templates
-     * and open the template in the editor.
+     *  This is an interface class that the player and playground owner,
+     * entered and can update their details.
      */
     package main;
 
