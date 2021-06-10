@@ -183,7 +183,6 @@ public class PlayGroundOwner implements User {
         PR.add(R);
         System.out.println('\n'+"Request was sent to PlayGround Owner he will answer soon, Please wait for response! ");
         System.out.println("Reply in progress......! " + '\n');
-        AcceptRequest(R);
     }
 
     
