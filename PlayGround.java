@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class that can any playground owner set his playground information.
+ * 
  */
 package main;
 
@@ -9,24 +8,29 @@ package main;
  *
  * @author OWNER
  */
+
 import java.util.ArrayList;
+
+/**
+ *
+ * @author sayed
+ */
+
 public class PlayGround {
-//    private String name;
     private String location;
     private int cancelationperiod;
     public ArrayList<int[]> avaliablehours = new ArrayList<int[]>();
-    //int[] avaliablehours;
     private int id;
     private int price;
     private PlayGroundOwner PGO;
 
+    
     /**
      * parametrized constructor
      * 
-     * @param name , the is the name of playground ex:(camp nou). 
+     * @param PGO , an object from playground owner. 
      * @param location , this is the location of the playground ex:(faisal).
-     * @param cancelationperiod , the period that can the player cancel the request. 
-     * @param avaliablehours , the hours that can the player request to reserve it.
+     * @param cancelationperiod , the period that can the player cancel the request.
      * @param id , the id of the playground ex:(if playground owner has many playgrounds, then each have ID).
      * @param price , the price of reservation per hour.
      */
@@ -38,6 +42,7 @@ public class PlayGround {
         this.price=price;
     }
 
+    
     /**
      *
      * @param location , set the location address of playground with this location address.
@@ -46,6 +51,7 @@ public class PlayGround {
         this.location = location;
     }
 
+    
     /**
      *
      * @param cancelationperiod , set the cancelation period of playground with this period.
@@ -54,14 +60,16 @@ public class PlayGround {
         this.cancelationperiod = cancelationperiod;
     }
 
+    
     /**
      *
-     * @param avaliablehours , set the avialable hours of playground with this hours.
+     * @param AH , set the avaliable houres for the playground .
      */
     public void setAvaliablehours(int[] AH) {
         avaliablehours.add(AH);
     }
 
+    
     /**
      *
      * @param id set the ID period of playground with this ID.
@@ -69,6 +77,7 @@ public class PlayGround {
     public void setId(int id) {
         this.id = id;
     }
+    
     
     /**
      *
@@ -78,6 +87,7 @@ public class PlayGround {
         this.price = price;
     }
 
+    
     /**
      *
      * @return , get the location address of the playground.
@@ -86,6 +96,7 @@ public class PlayGround {
         return location;
     }
 
+    
     /**
      *
      * @return , get the Cancelation period of the playground.
@@ -94,18 +105,15 @@ public class PlayGround {
         return cancelationperiod;
     }
     
-    public PlayGroundOwner GetPGO(){
-        return PGO;
-    }
+
     /**
-     * @return show the avialable hours of playground to user.
+     * @return , the Avaliable hours for each day for the playground .
      */
     public void getAvaliablehours() {
         String Days[]={"SatDay","SunDay","MonDay","TuesDay","WednesDay","ThursDay","FriDay"};
         int i=0;
         System.out.println("PlayGround Avaliable Hours: ");
         for(int[] anIntArray:avaliablehours) {
-        //iterate the retrieved array an print the individual elements
             System.out.print( Days[i] + " : ");
             i+=1;
             for (int aNumber : anIntArray) {
@@ -115,6 +123,7 @@ public class PlayGround {
         }
     }
 
+    
     /**
      *
      * @return  , get the ID of the playground.
@@ -123,6 +132,7 @@ public class PlayGround {
         return id;
     }
 
+    
     /**
      *
      * @return  , get the price per hour period of the playground.
@@ -130,6 +140,12 @@ public class PlayGround {
     public int getPrice() {
         return price;
     }
+    
+    
+    /**
+     *
+     * @display , function to display the information of playground . .
+     */
     
     void displayinfo(){
         System.out.println("PlayGround ID: "+this.getId());
@@ -140,17 +156,13 @@ public class PlayGround {
     }
     
     
-//    boolean checkavialabilty(int r){
-//        for(int i=0;i<avaliablehours.length;i++)
-//        {
-//            if(avaliablehours[r]==1)return true;
-//        }
-//        return false;
-//    }
+    /**
+     *
+     * @return get the information of the playground owner .
+     */
 
     public PlayGroundOwner getPGO() {
         return PGO;
     }
-    
-    
+       
 }
